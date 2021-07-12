@@ -1,0 +1,25 @@
+{
+    "name": "cotowali",
+    "displayName": "Cotowali",
+    "description": "Cotowali language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cotowali",
+            "aliases": ["Cotowali", "cotowali"],
+            "extensions": [".li"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cotowali",
+            "scopeName": "source.cotowali",
+            "path": "./syntaxes/cotowali.tmLanguage.json"
+        }]
+    }
+}
