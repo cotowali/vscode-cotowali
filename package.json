@@ -41,7 +41,17 @@
                 "scopeName": "source.cotowali",
                 "path": "./syntaxes/cotowali.tmLanguage.json"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Cotowali",
+            "properties": {
+                "cotowali.kuqi.path":{
+                    "type": "string",
+                    "default": "",
+                    "description": "Specifies Kuqi executable path"
+                }
+            }
+        }
     },
     "scripts": {
         "build": "tsc -b",
