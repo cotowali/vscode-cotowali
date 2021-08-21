@@ -54,6 +54,7 @@
         }
     },
     "scripts": {
+        "package": "vsce package",
         "build": "tsc -b",
         "watch": "tsc -b -w",
         "lint": "eslint --ignore-path .gitignore .",
