@@ -7,19 +7,26 @@
 import { ExtensionContext, window, workspace } from 'vscode'
 import { existsSync } from 'fs'
 import { execFileSync } from 'child_process'
+import { LanguageClient, TransportKind } from 'vscode-languageclient/node'
 
 export function activate(_context: ExtensionContext): void {
   if (hasKuqi()) {
-    // TODO: enableKuqi()
+    activateKuqi()
   }
 }
+
+let client: LanguageClient
 
 function getConfig() {
   return workspace.getConfiguration('cotowali')
 }
 
+function kuqiPath() {
+  return getConfig().get<string>('kuqi.path')
+}
+
 function hasKuqi() {
-  const path = getConfig().get<string>('kuqi.path')
+  const path = kuqiPath()
   if (path === '') {
     return false
   }
@@ -35,4 +42,28 @@ function hasKuqi() {
   }
 
   return true
+}
+
+function activateKuqi() {
+  client = new LanguageClient(
+    'kuqi',
+    'Kuqi',
+    {
+      command: kuqiPath(),
+      transport: TransportKind.stdio,
+    },
+    {
+      documentSelector: [{ scheme: 'file', language: 'cotowali' }],
+      synchronize: {
+        fileEvents: workspace.createFileSystemWatcher('**/*.li'),
+      },
+    },
+  )
+  client.start()
+}
+
+export async function deactivate(): Promise<void> {
+  if (client) {
+    await client.stop()
+  }
 }
