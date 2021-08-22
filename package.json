@@ -53,6 +53,7 @@
             }
         }
     },
+    "main": "./out/extension.js",
     "scripts": {
         "package": "vsce package",
         "build": "tsc -b",
