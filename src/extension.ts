@@ -6,6 +6,8 @@
 
 import { ExtensionContext, window, workspace } from 'vscode'
 import { existsSync } from 'fs'
+import { execFileSync } from 'child_process'
+
 export function activate(_context: ExtensionContext): void {
   if (hasKuqi()) {
     // TODO: enableKuqi()
@@ -24,6 +26,11 @@ function hasKuqi() {
 
   if (!existsSync(path)) {
     window.showErrorMessage('Kuqi is not found. Are you placing it in the specified path?')
+    return false
+  }
+  const kuqiVersionOut = execFileSync(path, ['version'], { encoding: 'utf-8' })
+  if (!kuqiVersionOut.includes('Kuqi')) {
+    window.showErrorMessage('Specified path is not Kuqi executable')
     return false
   }
 
