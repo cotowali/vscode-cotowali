@@ -4,6 +4,7 @@ import { ExtensionContext, window, workspace } from 'vscode'
 import { existsSync } from 'fs'
 import { execFileSync } from 'child_process'
 import { LanguageClient, TransportKind } from 'vscode-languageclient/node'
+import * as which from 'which'
 
 export function activate(_context: ExtensionContext): void {
   if (hasKuqi()) {
@@ -18,7 +19,7 @@ function getConfig() {
 }
 
 function kuqiPath() {
-  return getConfig().get<string>('kuqi.path')
+  return getConfig().get<string>('kuqi.path') ?? (which.sync('kuqi', { nothrow: true }) as string)
 }
 
 function hasKuqi() {
