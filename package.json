@@ -54,7 +54,7 @@
         }
     },
     "activationEvents": [
-		  "onLanguage:cotowali"
+        "onLanguage:cotowali"
     ],
     "main": "./out/extension.js",
     "scripts": {
@@ -79,6 +79,7 @@
         "vsce": "^1.96.1"
     },
     "dependencies": {
-        "vscode-languageclient": "^7.0.0"
+        "vscode-languageclient": "^7.0.0",
+        "which": "^2.0.2"
     }
 }
