@@ -25,6 +25,10 @@
           {
             "name": "constant.character.escape.cotowali",
             "match": "\\\\."
+          },
+          {
+            "name": "variable.other.substitution.cotowali",
+            "match": "\\$\\w+"
           }
         ]
       }, {
