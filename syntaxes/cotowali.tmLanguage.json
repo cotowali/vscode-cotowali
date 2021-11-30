@@ -17,16 +17,28 @@
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.cotowali",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.cotowali",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
+      "patterns": [{
+        "name": "string.quoted.double.cotowali",
+        "begin": "\"",
+        "end": "\"",
+        "patterns": [
+          {
+            "name": "constant.character.escape.cotowali",
+            "match": "\\\\."
+          }
+        ]
+      }, {
+        "name": "string.quoted.single.cotowali",
+        "begin": "'",
+        "end": "'",
+        "patterns": [
+          {
+            "name": "constant.character.escape.cotowali",
+            "match": "\\\\."
+          }
+        ]
+      }]
+    }
+  },
 	"scopeName": "source.cotowali"
 }
