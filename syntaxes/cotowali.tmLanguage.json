@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.cotowali",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
 			}]
 		},
 		"strings": {
