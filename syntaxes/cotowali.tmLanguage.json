@@ -7,7 +7,10 @@
 		},
 		{
 			"include": "#strings"
-		}
+		},
+    {
+      "include": "#numbers"
+    }
 	],
 	"repository": {
 		"keywords": {
@@ -16,8 +19,22 @@
 				"match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
 			}]
 		},
+    "numbers": {
+      "patterns": [{
+        "name": "constant.numeric.decimal.cotowali",
+        "match": "\\b[0-9]+\\b"
+      }]
+    },
 		"strings": {
       "patterns": [{
+        "name": "string.quoted.raw.cotowali",
+        "begin": "r\"",
+        "end": "\""
+      }, {
+        "name": "string.quoted.raw.cotowali",
+        "begin": "r'",
+        "end": "'"
+      }, {
         "name": "string.quoted.double.cotowali",
         "begin": "\"",
         "end": "\"",
