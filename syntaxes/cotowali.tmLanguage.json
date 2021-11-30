@@ -1,31 +1,31 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Cotowali",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Cotowali",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
     {
       "include": "#numbers"
     }
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.cotowali",
-				"match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
-			}]
-		},
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.cotowali",
+        "match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
+      }]
+    },
     "numbers": {
       "patterns": [{
         "name": "constant.numeric.decimal.cotowali",
         "match": "\\b[0-9]+\\b"
       }]
     },
-		"strings": {
+    "strings": {
       "patterns": [{
         "name": "string.quoted.raw.cotowali",
         "begin": "r\"",
@@ -61,5 +61,5 @@
       }]
     }
   },
-	"scopeName": "source.cotowali"
+  "scopeName": "source.cotowali"
 }
