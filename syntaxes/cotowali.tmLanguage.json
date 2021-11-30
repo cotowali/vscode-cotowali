@@ -14,51 +14,60 @@
   ],
   "repository": {
     "keywords": {
-      "patterns": [{
-        "name": "keyword.control.cotowali",
-        "match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
-      }]
+      "patterns": [
+        {
+          "name": "keyword.control.cotowali",
+          "match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
+        }
+      ]
     },
     "numbers": {
-      "patterns": [{
-        "name": "constant.numeric.decimal.cotowali",
-        "match": "\\b[0-9]+\\b"
-      }]
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal.cotowali",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
     },
     "strings": {
-      "patterns": [{
-        "name": "string.quoted.raw.cotowali",
-        "begin": "r\"",
-        "end": "\""
-      }, {
-        "name": "string.quoted.raw.cotowali",
-        "begin": "r'",
-        "end": "'"
-      }, {
-        "name": "string.quoted.double.cotowali",
-        "begin": "\"",
-        "end": "\"",
-        "patterns": [
-          {
-            "name": "constant.character.escape.cotowali",
-            "match": "\\\\."
-          },
-          {
-            "name": "variable.other.substitution.cotowali",
-            "match": "\\$\\w+"
-          }
-        ]
-      }, {
-        "name": "string.quoted.single.cotowali",
-        "begin": "'",
-        "end": "'",
-        "patterns": [
-          {
-            "name": "constant.character.escape.cotowali",
-            "match": "\\\\."
-          }
-        ]
-      }]
+      "patterns": [
+        {
+          "name": "string.quoted.raw.cotowali",
+          "begin": "r\"",
+          "end": "\""
+        },
+        {
+          "name": "string.quoted.raw.cotowali",
+          "begin": "r'",
+          "end": "'"
+        },
+        {
+          "name": "string.quoted.double.cotowali",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cotowali",
+              "match": "\\\\."
+            },
+            {
+              "name": "variable.other.substitution.cotowali",
+              "match": "\\$\\w+"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.cotowali",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cotowali",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
     }
   },
   "scopeName": "source.cotowali"
