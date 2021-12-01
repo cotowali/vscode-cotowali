@@ -84,6 +84,14 @@
         {
           "match": "\\b[_a-z][_a-zA-Z0-9]*\\b",
           "name": "variable.cotowali"
+        },
+        {
+          "match": "\\b[A-Z][_a-zA-Z0-9]*\\b",
+          "name": "entity.name.type.cotowali"
+        },
+        {
+          "match": "\\b[_A-Z][_a-zA-Z0-9]+\\b",
+          "name": "entity.name.type.cotowali"
         }
       ]
     },
