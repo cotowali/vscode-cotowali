@@ -6,6 +6,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#operators"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -18,6 +21,14 @@
         {
           "name": "keyword.control.cotowali",
           "match": "\\b(assert|require|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.cotowali",
+          "match": "(\\+|-|\\*|/|%|\\*\\*)"
         }
       ]
     },
