@@ -82,6 +82,10 @@
     "variables": {
       "patterns": [
         {
+          "match": "[_a-z][_a-zA-Z0-9]*(?=\\s*\\()",
+          "name": "entity.name.function.cotowali"
+        },
+        {
           "match": "\\b[_a-z][_a-zA-Z0-9]*\\b",
           "name": "variable.cotowali"
         },
