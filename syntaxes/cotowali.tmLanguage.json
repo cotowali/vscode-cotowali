@@ -37,6 +37,10 @@
         {
           "name": "keyword.operator.comparsion.cotowali",
           "match": "(==|!=|<=|>=|<(?!<)|>(?!>))"
+        },
+        {
+          "name": "keyword.operator.reference.cotowali",
+          "match": "\\&(?=\\w)"
         }
       ]
     },
