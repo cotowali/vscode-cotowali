@@ -43,6 +43,10 @@
           "match": "\\&(?=\\w)"
         },
         {
+          "name": "keyword.operator.pipe.cotowali",
+          "match": "(\\|>|\\|>>)"
+        },
+        {
           "name": "keyword.operator.assignment.cotowali",
           "match": "(=|\\+=|-=|\\*=|/=|%=)"
         }
