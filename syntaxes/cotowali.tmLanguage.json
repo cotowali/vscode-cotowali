@@ -24,6 +24,10 @@
     "numbers": {
       "patterns": [
         {
+          "name": "constant.numeric.exponential.cotowali",
+          "match": "\\b[0-9]+(\\.[0-9]+)?[eE][+-][0-9]+\\b"
+        },
+        {
           "name": "constant.numeric.float.cotowali",
           "match": "\\b[0-9]+\\.[0-9]+\\b"
         },
