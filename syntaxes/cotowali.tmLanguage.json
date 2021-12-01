@@ -29,6 +29,10 @@
         {
           "name": "keyword.operator.arithmetic.cotowali",
           "match": "(\\+|-|\\*|/|%|\\*\\*)"
+        },
+        {
+          "name": "keyword.operator.logical.cotowali",
+          "match": "(&&|\\|\\||!)"
         }
       ]
     },
