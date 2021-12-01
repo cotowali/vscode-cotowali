@@ -6,6 +6,9 @@
       "include": "#comments"
     },
     {
+      "include": "#inline_shell"
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -228,6 +231,40 @@
             {
               "name": "constant.character.escape.cotowali",
               "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "inline_shell": {
+      "patterns": [
+        {
+          "name": "meta.embedded.inline.shell",
+          "begin": "\\b(sh|inline)\\s*\\{",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.sh.cotowali"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "source.shell"
+            }
+          ]
+        },
+        {
+          "name": "meta.embedded.inline.powershell",
+          "begin": "\\b(pwsh)\\s*\\{",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.pwsh.cotowali"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "source.powershell"
             }
           ]
         }

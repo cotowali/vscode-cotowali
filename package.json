@@ -39,7 +39,11 @@
             {
                 "language": "cotowali",
                 "scopeName": "source.cotowali",
-                "path": "./syntaxes/cotowali.tmLanguage.json"
+                "path": "./syntaxes/cotowali.tmLanguage.json",
+                "embeddedLanguages": {
+                  "meta.embedded.inline.shell": "shellscript",
+                  "meta.embedded.inline.powershell": "powershell"
+                }
             }
         ],
         "configuration": {
