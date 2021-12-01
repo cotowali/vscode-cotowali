@@ -41,6 +41,10 @@
         {
           "name": "keyword.operator.reference.cotowali",
           "match": "\\&(?=\\w)"
+        },
+        {
+          "name": "keyword.operator.assignment.cotowali",
+          "match": "(=|\\+=|-=|\\*=|/=|%=)"
         }
       ]
     },
