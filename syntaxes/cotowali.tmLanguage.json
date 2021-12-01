@@ -22,6 +22,9 @@
     },
     {
       "include": "#numbers"
+    },
+    {
+      "include": "#variables"
     }
   ],
   "repository": {
@@ -73,6 +76,14 @@
             }
           },
           "end": "$"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "match": "\\b[_a-z][_a-zA-Z0-9]*\\b",
+          "name": "variable.cotowali"
         }
       ]
     },
