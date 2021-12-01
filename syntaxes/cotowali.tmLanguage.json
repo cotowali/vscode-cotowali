@@ -33,6 +33,10 @@
         {
           "name": "keyword.operator.logical.cotowali",
           "match": "(&&|\\|\\||!)"
+        },
+        {
+          "name": "keyword.operator.comparsion.cotowali",
+          "match": "(==|!=|<=|>=|<(?!<)|>(?!>))"
         }
       ]
     },
