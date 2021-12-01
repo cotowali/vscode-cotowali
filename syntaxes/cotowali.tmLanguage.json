@@ -174,6 +174,26 @@
             {
               "name": "variable.other.substitution.cotowali",
               "match": "\\$\\w+"
+            },
+            {
+              "name": "string.substitution.expression.cotowali",
+              "begin": "(\\$\\{)",
+              "beginCaptures": {
+                "1": {
+                  "name": "punctuation.defenition.substitution.begin.cotowali"
+                }
+              },
+              "end": "\\}",
+              "endCaptures": {
+                "1": {
+                  "name": "punctuation.defenition.substitution.end.cotowali"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "$self"
+                }
+              ]
             }
           ]
         },
