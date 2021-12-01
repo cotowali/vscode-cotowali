@@ -9,6 +9,9 @@
       "include": "#operators"
     },
     {
+      "include": "#constants"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -51,6 +54,12 @@
           "match": "(=|\\+=|-=|\\*=|/=|%=)"
         }
       ]
+    },
+    "constants": {
+      "patterns": [{
+        "name": "constant.language.cotowali",
+        "match": "\\b(true|false|null)\\b"
+      }]
     },
     "numbers": {
       "patterns": [
