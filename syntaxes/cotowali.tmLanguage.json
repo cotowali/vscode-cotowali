@@ -12,6 +12,9 @@
       "include": "#constants"
     },
     {
+      "include": "#storage_types"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -60,6 +63,22 @@
         "name": "constant.language.cotowali",
         "match": "\\b(true|false|null)\\b"
       }]
+    },
+    "storage_types": {
+      "patterns": [
+        {
+          "name": "storage.type.boolean.cotowali",
+          "match": "\\bbool\\b"
+        },
+        {
+          "name": "storage.type.numeric.cotowali",
+          "match": "\\b(int|float)\\b"
+        },
+        {
+          "name": "storage.type.string.cotowali",
+          "match": "\\bstring\\b"
+        }
+      ]
     },
     "numbers": {
       "patterns": [
