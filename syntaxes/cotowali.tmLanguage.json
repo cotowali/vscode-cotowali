@@ -3,6 +3,9 @@
   "name": "Cotowali",
   "patterns": [
     {
+      "include": "#comments"
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -22,6 +25,57 @@
     }
   ],
   "repository": {
+    "block_comments": {
+      "patterns": [
+        {
+          "name": "comment.block.cotowali",
+          "begin": "(\\/\\*)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.cotowali"
+            }
+          },
+          "end": "(\\*\\/)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.cotowali"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#block_comments"
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "include": "#block_comments"
+        },
+        {
+          "name": "comment.line.double-slash.cotowali",
+          "begin": "(\\/\\/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.cotowali"
+            }
+          },
+          "end": "$"
+        },
+        {
+          "name": "comment.line.triple-slash.cotowali",
+          "begin": "(\\/\\/\\/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.cotowali"
+            }
+          },
+          "end": "$"
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
