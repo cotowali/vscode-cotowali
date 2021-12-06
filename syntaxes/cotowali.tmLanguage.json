@@ -106,7 +106,7 @@
       "patterns": [
         {
           "name": "keyword.control.cotowali",
-          "match": "\\b(assert|require|as|if|else|while|for|in|continue|break|fn|return|yield|var|type|namespace)\\b"
+          "match": "\\b(assert|require|as|if|else|while|for|in|continue|break|fn|return|yield|var|type|module)\\b"
         }
       ]
     },
